@@ -7,8 +7,8 @@
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <link rel="icon" type="image/x-icon"
         href="https://raw.githubusercontent.com/mapbox/assembly/publisher-staging/src/svgs/mapbox.svg">
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v3.30.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.30.0/mapbox-gl.css' rel='stylesheet' />
     <script src="https://cdn.jsdelivr.net/npm/mapbox-gl-globe-minimap@1.2.0/dist/bundle.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -350,6 +350,50 @@
                 });
             };
 
+            // FIXED: Pointing directly to shading_photos.geojson in the root Coding folder
+            map.addSource('shading-photos', {
+                type: 'geojson',
+                data: 'shading-photos.geojson'
+            });
+
+            map.addLayer({
+                id: 'shading-photo-pins',
+                type: 'circle',
+                source: 'shading-photos',
+                paint: {
+                    'circle-radius': 7,
+                    'circle-color': '#ff5a1f',
+                    'circle-stroke-width': 2,
+                    'circle-stroke-color': '#ffffff',
+                    'circle-opacity': 0,        // starts hidden — chapter 5's onChapterEnter fades it in
+                    'circle-stroke-opacity': 0
+                }
+            });
+
+            // Popup showing the photo + caption when a pin is clicked
+            var photoPopup = new mapboxgl.Popup({ closeButton: true, maxWidth: '260px' });
+
+            map.on('click', 'shading-photo-pins', function (e) {
+                var props = e.features[0].properties;
+                var coordinates = e.features[0].geometry.coordinates.slice();
+
+                // FIXED: Updated path to match Data/processed photos/ folder structure seen in your sidebar
+                var html =
+                    '<div style="font-family: Karla, sans-serif;">' +
+                    '<img src="' + props.image +'" style="width:100%; border-radius:4px; margin-bottom:6px;" />' +
+                    '<div style="font-size:12px; color:#444;">' + props.caption + '</div>' +
+                    '</div>';
+
+                photoPopup.setLngLat(coordinates).setHTML(html).addTo(map);
+            });
+
+            map.on('mouseenter', 'shading-photo-pins', function () {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+            map.on('mouseleave', 'shading-photo-pins', function () {
+                map.getCanvas().style.cursor = '';
+            });
+
             // setup the instance, pass callback functions
             scroller
                 .setup({
@@ -367,7 +411,7 @@
                     if (config.showMarkers) {
                         marker.setLngLat(chapter.location.center);
                     }
-                    if (chapter.onChapterEnter.length > 0) {
+                    if (chapter.onChapterEnter && chapter.onChapterEnter.length > 0) {
                         chapter.onChapterEnter.forEach(setLayerOpacity);
                     }
                     if (chapter.callback) {
@@ -393,7 +437,7 @@
                 .onStepExit(response => {
                     var chapter = config.chapters.find(chap => chap.id === response.element.id);
                     response.element.classList.remove('active');
-                    if (chapter.onChapterExit.length > 0) {
+                    if (chapter.onChapterExit && chapter.onChapterExit.length > 0) {
                         chapter.onChapterExit.forEach(setLayerOpacity);
                     }
                 });
@@ -402,7 +446,7 @@
             if (config.auto) {
                 document.querySelectorAll('[data-scrollama-index="0"]')[0].scrollIntoView();
             }
-        });    
+        });
 
     </script>
 
