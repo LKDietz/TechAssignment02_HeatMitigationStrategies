@@ -1,0 +1,261 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7722388888889,
+          1.2983055555555554
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "image": "photos/walk-01.jpg",
+        "caption": "Stop 1 \u2014 add your observation here",
+        "time": "2026:09:04 18:06:15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.77209444444445,
+          1.2978194444444444
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "image": "photos/walk-02.jpg",
+        "caption": "Stop 2 \u2014 add your observation here",
+        "time": "2026:09:04 18:07:13"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.77205,
+          1.2976027777777777
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "image": "photos/walk-03.jpg",
+        "caption": "Stop 3 \u2014 add your observation here",
+        "time": "2026:09:04 18:07:40"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.77121666666666,
+          1.2980527777777777
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "image": "photos/walk-04.jpg",
+        "caption": "Stop 4 \u2014 add your observation here",
+        "time": "2026:09:04 18:09:15"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.77115,
+          1.2980194444444444
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "image": "photos/walk-05.jpg",
+        "caption": "Stop 5 \u2014 add your observation here",
+        "time": "2026:09:04 18:09:32"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.77088055555555,
+          1.2978555555555555
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "image": "photos/walk-06.jpg",
+        "caption": "Stop 6 \u2014 add your observation here",
+        "time": "2026:09:04 18:09:59"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.77068333333334,
+          1.2976805555555555
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "image": "photos/walk-07.jpg",
+        "caption": "Stop 7 \u2014 add your observation here",
+        "time": "2026:09:04 18:10:29"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.7702861111111,
+          1.2977666666666665
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "image": "photos/walk-08.jpg",
+        "caption": "Stop 8 \u2014 add your observation here",
+        "time": "2026:09:04 18:11:41"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.77021111111111,
+          1.2978138888888888
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "image": "photos/walk-09.jpg",
+        "caption": "Stop 9 \u2014 add your observation here",
+        "time": "2026:09:04 18:11:49"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.76998888888889,
+          1.298011111111111
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "image": "photos/walk-10.jpg",
+        "caption": "Stop 10 \u2014 add your observation here",
+        "time": "2026:09:04 18:12:28"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.76995,
+          1.2980305555555554
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "image": "photos/walk-11.jpg",
+        "caption": "Stop 11 \u2014 add your observation here",
+        "time": "2026:09:04 18:12:29"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.8057861111111,
+          1.294211111111111
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "image": "photos/walk-12.jpg",
+        "caption": "Stop 12 \u2014 add your observation here",
+        "time": "2026:09:04 19:07:06"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.80559444444444,
+          1.29415
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "image": "photos/walk-13.jpg",
+        "caption": "Stop 13 \u2014 add your observation here",
+        "time": "2026:09:04 19:07:30"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.80528888888888,
+          1.2937027777777776
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "image": "photos/walk-14.jpg",
+        "caption": "Stop 14 \u2014 add your observation here",
+        "time": "2026:09:04 19:08:02"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.80384722222222,
+          1.291486111111111
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "image": "photos/walk-15.jpg",
+        "caption": "Stop 15 \u2014 add your observation here",
+        "time": "2026:09:04 19:11:59"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          103.80383333333333,
+          1.291475
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "image": "photos/walk-16.jpg",
+        "caption": "Stop 16 \u2014 add your observation here",
+        "time": "2026:09:04 19:12:03"
+      }
+    }
+  ]
+}
